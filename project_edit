@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delici Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Playfair Display', serif;
+      background-image: url('https://wallpapercave.com/wp/wp3157183.jpg'); 
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .top-bar {
+      background: rgba(0,0,0,0.9);
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+    .top-bar div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 100px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .header h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+    .header p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 30px;
+      background-color: #d6ad60;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    .find-table-btn {
+      position: absolute;
+      top: 20%;
+      right: 5%;
+      padding: 12px 25px;
+      background-color: #e3c48f;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .book-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e3c48f;
+      color: black;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+    }
+    .nav-arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+    .nav-arrows span {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div>
+      <span>📍 SUAN DUSIT UNIVERSITY, DUSIT, BANKOK, TH</span>
+    </div>
+    <div>
+      <span>☎ +66 99-630-7853</span>
+      <span>✉ ppookoo843@gmail.com</span>
+    </div>
+  </div>
+
+    <button class= "find-table-btn" onclick="window.location.href='../login/login.html'">
+      เข้าสู่ระบบ
+    </button>
+
+
+  <div class="header">
+    <h5 style="letter-spacing: 2px; color: #e3c48f">Today I will love myself enough to exercise.</h5>
+    <h1>SmartYoga AI<br>ElderMotion</h1>
+    <p>Sore today, strong tomorrow.</p>
+    <button class="btn">View Our Menu</button>
+  </div>
+
+  <div class="nav-arrows">
+    <span onclick="prevSlide()">◀</span>
+    <span onclick="nextSlide()">▶</span>
+  </div>
+
+  <button class="book-btn">
+    <span>📅</span> BOOK A TABLE
+  </button>
+
+  <script>
+    function prevSlide() {
+      alert("Previous Slide");
+    }
+
+    function nextSlide() {
+      alert("Next Slide");
+    }
+  </script>
+</body>
+</html>
