@@ -1,19 +1,204 @@
+/*page1html/*
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delici Restaurant</title>
+  <title>SmartYoga AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pange1.css">
   <style>
-    * {
+    body {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: background-image 0.6s ease-in-out;
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+      <div class="container">
+        <div class="nav.con">
+          <div class="logo">
+          <a href="pange1.html">
+            <img src="LOGO-2.png" alt="YOGA Logo" style="height: 80px;">
+              </a>
+          </div>
+          <ul class="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">TUTORIAL</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">CONTACTS</a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+    <button class= "find-table-btn" onclick="window.location.href='../Sign Up/Sign up.html'">Sign Up</button>
+
+
+  <div class="header">
+    <h5 style="letter-spacing: 2px; color: #e3c48f; font-weight: 300; margin-bottom: 15px;">Today I will love myself enough to exercise.</h5>
+    <h1>SmartYoga AI<br>ElderMotion</h1>
+    <p>Sore today, strong tomorrow.</p>
+    <button class="btn">Let's start.</button>
+  </div>
+
+  <div class="nav-arrows">
+    <span onclick="prevSlide()">◀</span>
+    <span onclick="nextSlide()">▶</span>
+  </div>
+
+  <button class="book-btn">
+    <span>📅</span> BOOK A TABLE
+  </button>
+
+  <script>
+  // รายการภาพพื้นหลัง
+    const images = [
+    "url('https://wallpapercave.com/wp/wp3157183.jpg')",
+    "url('wallpaper2.jpg')",
+    ];
+
+    let currentIndex = 0;
+
+  // ฟังก์ชันเปลี่ยนภาพพื้นหลังของ body
+    function showSlide(index) {
+     document.body.style.backgroundImage = images[index];
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+  // แสดงภาพแรกเมื่อโหลดหน้าเว็บ
+    window.onload = () => showSlide(currentIndex);
+</script>
+</body>
+</html>
+/*page1.css/*
+/* CSS ในแถวแรกด้านบน*/
+*{
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1140;
+  margin: 0 auto;
+}
+
+nav{
+  padding: 1rem;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 2px 8px rgba(156, 8, 255, 0.2);
+}
+
+.nav.con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a{
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-left: auto; /* บังคับให้เมนูไปอยู่ด้านขวา */
+}
+
+.menu li{
+  margin: 0 1rem;
+}
+
+.menu li a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("images/yoga-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #000000;
+}
+
+header {
+  background-color: rgba(162, 156, 167, 0.85);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(156, 8, 255, 0.2);
+}
+
+.content {
+  background-color: rgba(211, 227, 245, 0.85);
+  margin: 40px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(156, 8, 255, 0.2);
+}
+
+ul {
+  list-style: circle;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.login-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  color: rgb(250, 250, 250);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+/*CSS TEMPLEAT หน้าแรก */
+* {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    .header h1 {
+        font-size: 4.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }   
+
     body {
       font-family: 'Playfair Display', serif;
-      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092'); /* ใช้ภาพแทนได้ */
+      background-image: url('https://wallpapercave.com/wp/wp3157183.jpg'); 
       background-size: cover;
       background-position: center;
       color: white;
@@ -46,14 +231,14 @@
       margin-bottom: 30px;
     }
     .btn {
-      padding: 12px 30px;
-      background-color: #d6ad60;
-      color: black;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      text-transform: uppercase;
-    }
+        padding: 12px 30px;
+        background-color: transparent;
+        border: 2px solid #d6ad60;
+        color: #d6ad60;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+    }   
     .find-table-btn {
       position: absolute;
       top: 20%;
@@ -93,46 +278,437 @@
       padding: 10px;
       cursor: pointer;
     }
-  </style>
+/*login*/
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>เข้าสู่ระบบ</title>
+  <link rel="stylesheet" href="loginyoga.css" />
 </head>
 <body>
-  <div class="top-bar">
-    <div>
-      <span>📍 Restaurant St, Delicious City, London 9578, UK</span>
-      <span>⏰ Daily : 8.00 am to 10.00 pm</span>
+  <form id="loginForm" onsubmit="return validateLogin()">
+    <h2>เข้าสู่ระบบ</h2>
+    <label for="username">ชื่อผู้ใช้</label>
+    <input type="text" id="username" name="username" required placeholder="กรอกชื่อผู้ใช้" />
+
+    <label for="password">รหัสผ่าน</label>
+    <div class="password-wrapper">
+      <input type="password" id="password" name="password" required placeholder="กรอกรหัสผ่าน" autocomplete="current-password" />
+      <span id="togglePassword" class="toggle-password" title="แสดง/ซ่อนรหัสผ่าน">⦾</span>
     </div>
-    <div>
-      <span>☎ +1 123 456 7890</span>
-      <span>✉ booking@restaurant.com</span>
-    </div>
-  </div>
 
-  <button class="find-table-btn">FIND A TABLE</button>
+    <p id="error" class="error"></p>
 
-  <div class="header">
-    <h5 style="letter-spacing: 2px; color: #e3c48f">Today I will love myself enough to exercise.</h5>
-    <h1>Flavors Inspired by<br>the Seasons</h1>
-    <p>Come with family & feel the joy of mouthwatering food</p>
-    <button class="btn">View Our Menu</button>
-  </div>
+    <button type="submit">เข้าสู่ระบบ</button>
 
-  <div class="nav-arrows">
-    <span onclick="prevSlide()">◀</span>
-    <span onclick="nextSlide()">▶</span>
-  </div>
-
-  <button class="book-btn">
-    <span>📅</span> BOOK A TABLE
-  </button>
+    <p>ยังไม่มีบัญชี? <a href="../Sign Up/Sign up.html">สมัครสมาชิกที่นี่</a></p>
+  </form>
 
   <script>
-    function prevSlide() {
-      alert("Previous Slide");
-    }
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
 
-    function nextSlide() {
-      alert("Next Slide");
+    togglePassword.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.textContent = type === 'password' ? '⦾' : '⦿';
+    });
+
+    function validateLogin() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+      const errorEl = document.getElementById("error");
+      errorEl.textContent = "";
+
+      if (username === "" || password === "") {
+        errorEl.textContent = "กรุณากรอกชื่อผู้ใช้และรหัสผ่านให้ครบถ้วน";
+        return false;
+      }
+
+      if (username !== "user" || password !== "1234") {
+        errorEl.textContent = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
+        return false;
+      }
+
+      alert("เข้าสู่ระบบสำเร็จ!");
+      return false;
     }
   </script>
 </body>
 </html>
+/*login.css/*
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to bottom, #1a0e2a, #402c6e);
+  background-image: url('yoka.jpg'); /* ถ้ามีภาพทะเลกลางคืน */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 35px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  width: 380px;
+  border: 1px solid #f9e0b2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #f9e0b2;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  padding: 12px 40px 12px 15px;
+  border: 1.5px solid #bbb;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus {
+  border-color: #f9e0b2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(249, 224, 178, 0.8);
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-100%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #f9e0b2;
+}
+
+.toggle-password:hover {
+  color: #ffe09e;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 15px;
+  min-height: 18px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f9e0b2;
+  color: #1a0e2a;
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffe09e;
+}
+
+form p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+form p a {
+  color: #f9e0b2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+form p a:hover {
+  text-decoration: underline;
+}
+/*sign up.html/*
+<!DOCTYPE html>
+<html lang="en">
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | SmartYoga AI</title>
+  <link rel="stylesheet" href="Sing Up.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Prompt&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-overlay">
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <p class="subtitle">Start your path with SmartYoga AI</p>
+      <form id="signupForm" onsubmit="return validateForm()">
+        <label>Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="text" id="password" placeholder="Enter password" required>
+
+        <label>Confirm Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+          <span id="toggleConfirm" class="toggle-icon" title="แสดง/ซ่อนรหัสผ่าน">⦾</span>
+        </div>
+        
+        <label>Gender</label>
+        <select id="gender">
+          <option value="">-- Select Gender --</option>
+          <option>ชาย</option>
+          <option>หญิง</option>
+          <option>อื่นๆ</option>
+        </select>
+
+        <label>Birthdate</label>
+        <input type="date" id="birthdate" required>
+
+        <div class="btn-row">
+          <button type="submit" class="submit-btn"onclick="goToSignUp()">Sign UP</button>
+          <button type="reset" class="reset-btn"onclick="goToLogin()">Log In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="Sign Up.js"></script>
+</body>
+</html>
+/*sign up.css/*
+/* ฟอนต์และพื้นหลัง */
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('yoka.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-overlay {
+  backdrop-filter: blur(6px);
+  background-color: rgba(20, 20, 30, 0.7);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  max-width: 450px;
+  width: 100%;
+}
+
+/* กล่องฟอร์ม */
+.signup-box {
+  color: #f8f8f8;
+}
+
+.signup-box h1 {
+  font-family: 'Playfair Display', serif;
+  color: #f7d774;
+  font-size: 32px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.signup-box .subtitle {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c9c9c9;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e2e3e;
+  color: #fff;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus, select:focus {
+  outline: none;
+  background-color: #3e3e55;
+}
+
+/* ปุ่ม */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.submit-btn {
+  background-color: #f7d774;
+  color: #000;
+}
+
+.reset-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 10px; /* space สำหรับไอคอน */
+}
+
+.toggle-icon {
+  display: flex;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #f7d774;
+  font-size: 18px;
+  user-select: none;
+}
+/*sign up.js/*
+const existingUsers = ["Cand"];
+const existingEmails = ["cand@com"];
+
+function validateForm() {
+  const username = document.getElementById("username").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const birthdate = document.getElementById("birthdate").value;
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!username || existingUsers.includes(username)) {
+    alert("ชื่อผู้ใช้นี้ถูกใช้แล้วหรือว่างเปล่า");
+    return false;
+  }
+
+  if (!email || !emailPattern.test(email) || existingEmails.includes(email)) {
+    alert("อีเมลไม่ถูกต้องหรือถูกใช้งานแล้ว");
+    return false;
+  }
+
+  if (!password || password.length < 8 || !/^[A-Z]/.test(password)) {
+    alert("รหัสผ่านต้องขึ้นต้นด้วยตัวอักษรพิมพ์ใหญ่และมีอย่างน้อย 8 ตัว");
+    return false;
+  }
+
+  if (!confirmPassword || confirmPassword !== password) {
+    alert("ยืนยันรหัสผ่านไม่ตรงกัน");
+    return false;
+  }
+
+  if (!birthdate) {
+    alert("กรุณากรอกวันเกิด");
+    return false;
+  }
+
+  const age = calculateAge(new Date(birthdate));
+  if (age < 7) {
+    alert("ต้องมีอายุอย่างน้อย 7 ปี");
+    return false;
+  }
+
+  alert("สมัครสมาชิกสำเร็จ");
+  return false; // ปิดการส่งจริง
+}
+
+function calculateAge(birth) {
+  const today = new Date();
+  let age = today.getFullYear() - birth.getFullYear();
+  const m = today.getMonth() - birth.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
+  return age;
+}
+
+document.getElementById("toggleConfirm").addEventListener("click", function () {
+  const confirmField = document.getElementById("confirmPassword");
+  const icon = this;
+
+  if (confirmField.type === "password") {
+    confirmField.type = "text";
+    icon.textContent = "⦿"; // แสดงว่าตอนนี้มองเห็นแล้ว
+  } else {
+    confirmField.type = "password";
+    icon.textContent = "⦾"; // แสดงว่าตอนนี้ปิดอยู่
+  }
+});
+
+  function goToSignUp() {
+    // ส่งไปหน้า sign-up-success.html หรือ URL ที่คุณต้องการ
+    window.location.href = "../pange1/pange1.html";
+  }
+
+  function goToLogin() {
+    // ส่งไปหน้า login.html หรือ URL ที่คุณต้องการ
+    window.location.href = "../loginyoga/loginyoga.html";
+  }
+
+
+
